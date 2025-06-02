@@ -1,14 +1,14 @@
 'use strict'
 
 const testimonial = document.getElementById("testimonial");
-const vahcare = document.getElementById("by-vahcare");
+const vahcare = document.getElementById("vahcare");
 const jobs = document.getElementById("jobs");
 
 // functions
-const testimonialFunction = function(){
-	document.writeln('loading... please wait');
-	window.location.assign('testimonial.html');
-}
+// const testimonialFunction = function(){
+// 	document.writeln('loading... please wait');
+// 	window.location.assign('testimonial.html');
+// }
 
 const vahCare = function(){
 	document.writeln('loading... please wait');
@@ -22,7 +22,7 @@ const jobsFunction = function(){
 
 
 //listen for events
-testimonial.addEventListener('click',testimonialFunction,true);
+// testimonial.addEventListener('click',testimonialFunction,true);
 
 vahcare.addEventListener('click',vahCare,true);
 
