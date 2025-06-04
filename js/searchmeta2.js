@@ -26,6 +26,10 @@ searchInput.addEventListener('keydown', (event) => {
       	document.writeln("fetching data... please wait");
         window.location.assign('./index.html');
         break;
+      case "Services":
+        document.writeln("fetching data... please wait");
+        window.location.assign("./services.html");
+        break;
       default:
       	document.writeln("fetching data... please wait");
         window.location.assign('./searchmeta.html');
