@@ -72,6 +72,7 @@ searchInput.addEventListener('input', () => {
 
     if (text.includes(searchTerm)) {
       item.style.display = 'block';
+      document.getElementById("searchres3").textContent = "match found";
     } else {
       item.style.display = 'none';
       document.getElementById("searchres3").textContent = "nothing found";
@@ -87,13 +88,42 @@ searchInput.addEventListener('change', (event) => {
   sessionStorage.setItem('searchpara',searchTerm);
 });
 
-
 searchInput.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     // Code to execute when Enter is pressed
-    if (sessionStorage.getItem('searchpara') !== null) {
-      window.location.assign('./services.html');
+    switch(searchInput.value){
+      case "Carers":
+        document.writeln("fetching data... please wait");
+        window.location.assign('./services.html#carers');
+        break;
+      case "Registered General & Mental Nurses":
+        document.writeln("fetching data... please wait");
+        window.location.assign('./services.html#rgm-nurses');
+        break;
+      case "Kitchen Assistants":
+        document.writeln("fetching data... please wait");
+        window.location.assign('./services.html#kitchen-assistants');
+        break;
+      case "Chefs":
+        document.writeln("fetching data... please wait");
+        window.location.assign('./services.html#chefs');
+        break;
+      case "Housekeepers":
+        document.writeln("fetching data... please wait");
+        window.location.assign('./services.html#housekeepers');
+        break;
+      case "Home":
+        document.writeln("fetching data... please wait");
+        window.location.assign('./index.html');
+        break;
+      default:
+        document.writeln("fetching data... please wait");
+        window.location.assign('./searchmeta.html');
+        break;
     }
+    // if (sessionStorage.getItem('searchpara') !== null) {
+    //   window.location.assign('./services.html');
+    // }
     console.log('Enter key pressed');
     // alert('key pressed');
   }

@@ -36,8 +36,15 @@
 					</li>
 				</ul>
 				<form class="d-flex">
-					<input type="text" class="form-control me-2" placeholder="Search...">
-					<button type="button" class="btn btn-success">Search</button>
+					<input type="text" id="search-input" class="form-control me-2" placeholder="Search..." list="searchquery">
+					<datalist id="searchquery">
+                <option value="Carers">Carers </option>
+                <option value="Registered General & Mental Nurses ">Registered General & Mental Nurses</option>
+                <option value="Kitchen Assistants ">Kitchen Assistants</option>
+                <option value="Chefs">Chefs</option>
+                <option value="Housekeepers">Housekeepers</option>
+           </datalist>
+					<button type="button" id="submit" class="btn btn-success">Search</button>
 				</form>
 			</div>
 		</div>
@@ -48,12 +55,10 @@
 		</div>
 	</div>
 	<div class="container mt-4">
-		<div class="rounded text-bg-light p-3 shadow shadow-lg">
-			<center><iframe class="mt-4 mb-2" src="https://lottie.host/embed/ce77b770-d067-4a6f-b745-45b571c941ac/qW5lSCLOxI.lottie"></iframe></center>
-			<ol>
-				<li>
-				  <h2>Care Services That Empower Lives</h2>
-          <p>
+		<div class="rounded text-bg-light p-5 shadow shadow-lg">
+				  <h2 class="text-center fw-bold text-capitalize">care services that empower lives</h2>
+			<center><iframe class="mt-4 mb-3" src="https://lottie.host/embed/ce77b770-d067-4a6f-b745-45b571c941ac/qW5lSCLOxI.lottie"></iframe></center>
+          <p class="text-center">
           	Our care services are designed with the utmost respect for your dignity and independence. We create a nurturing environment that not only meets practical needs but also enriches the spirit.
           </p>
           <h3>Personal & Home Care:</h3>
@@ -83,14 +88,13 @@
           <h3>Enhanced Living Solutions:</h3>
           <ul>
           	<li>
-		24/7 On-Call Support: Our round-the-clock service ensures that help is always just a call away.
+								24/7 On-Call Support: Our round-the-clock service ensures that help is always just a call away.
           	</li>
           	<li>
           		Flexible Care Plans: We work hand-in-hand with families and healthcare providers to create short-term or long-term care plans that adapt as needs evolve.
           	</li>
           </ul>
-				</li>
-				<li>
+				<!-- <li>
 					<h2>Healthcare Recruitment – Connecting Excellence with Opportunity</h2>
 					<p>
 						Our healthcare recruitment division is founded on the principle that every care facility, hospital or home deserves access to the very best professionals. Through rigorous selection, background verification and continuous training, we ensure that your workforce is both skilled and compassionate.
@@ -168,8 +172,7 @@
 							</ul>
 						</li>
 					</ul>
-				</li>
-			</ol>
+				</li> -->
 		</div>
 	</div>
 	<div class="container mt-5">
@@ -181,7 +184,7 @@
 		</div>
 	</div>
 	<div class="container mt-5">
-		<div class="rounded text-bg-success p-5">
+		<div class="rounded p-5" style="background: #07BBE2; color: white;">
 			<h3 class="text-center fw-bold text-capitalize">our key staffing categories</h3>
 		</div>
 	</div>
@@ -189,7 +192,7 @@
 	<div class="container mt-4" id="carers">
 		<div class="shadow shadow-lg rounded text-bg-light p-5">
 			<h3 class="text-center fw-bold text-capitalize">carers</h3>
-			<center><iframe src="https://lottie.host/embed/560e9a2b-39f8-47d2-a7cb-7b5747ee98a7/swQRpb2nIf.lottie"></iframe></center>
+			<center><iframe class="mt-4" src="https://lottie.host/embed/560e9a2b-39f8-47d2-a7cb-7b5747ee98a7/swQRpb2nIf.lottie"></iframe></center>
 			<p class="text-center">
 				<ul type="circle">
 								<li>
@@ -210,7 +213,7 @@
 		<div class="shadow shadow-lg p-5 text-bg-light">
 			<h3 class="text-center fw-bold text-capitalize">registered general & mental nurses</h3>
 			<center>
-				<iframe src="https://lottie.host/embed/a05a8453-e74f-434f-beda-af1abcaa180b/HKy0BJFVWx.lottie"></iframe>
+				<iframe class="mt-4" src="https://lottie.host/embed/a05a8453-e74f-434f-beda-af1abcaa180b/HKy0BJFVWx.lottie"></iframe>
 			</center>
 			<p>
 				<ul type="circle">
@@ -294,5 +297,7 @@
 			</div>
 		</div>
 	</footer>
+  <script async src="./js/searchmeta.js"></script>
+  <noscript>Your browser does not support javascript</noscript>
 </body>
 </html>
