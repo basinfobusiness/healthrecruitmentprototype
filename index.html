@@ -46,6 +46,11 @@
 ></script>
   <script async src="./js/app.js"></script>
   <noscript>Your browser does not support javascript</noscript>
+  <style>
+    label{
+      font-variant: small-caps;
+    }
+  </style>
 </head>
 
 <body>
@@ -54,12 +59,12 @@
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="javascript:void(0)">
-            <img class="rounded-pill" src="./images/png_VahCare.png" alt="logo" style="width: 70px;">
-            <span>
+            <img class="rounded-pill" src="./images/png_VahCare.png" alt="logo" style="margin-right: 25px; width: 90px;">
+            <!-- <span>
               VAH Care
-            </span>
+            </span> -->
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,7 +102,7 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <section class="slider_section">
+    <section class="slider_section" style="background: url('images/vah2.png');">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -111,48 +116,12 @@
                 We believe that care is more than a service - it's a calling. We deliver bespoke care solutions and state-of-the-art healthcare recruitment services that bring together empathy, precision and expertise. Our dual focus ensures that individuals receive the personalised attention they deserve, while healthcare facilities are staffed with professionals who drive excellence.
               </p>
             </div>
-            <!-- <div class="find_container ">
-              <form>
-                <div class="form-row ">
-                  <div class="form-group col-lg-4">
-                    <input type="text" class="form-control" id="inputPatientName" placeholder="Keywords" list="keywords">
-                    <datalist id="keywords">
-                      <option value="Nursing">Nursing</option>
-                      <option value="Allied Health">Allied Health</option>
-                      <option value="Healthcare Management">Healthcare Management</option>
-                      <option value="Hospital Administration">Hospital Administration</option>
-                      <option value="Patient Care">Patient Care</option>
-                    </datalist>
-                  </div>
-                  <div class="form-group col-lg-4">
-                    <select name="" class="form-control" id="inputDoctorName">
-                      <option value="All locations">All Locations</option>
-                      <option value="location">Location 2 </option>
-                      <option value="location">Location 3 </option>
-                    </select>
-                  </div>
-                  <div class="form-group col-lg-4">
-                    <select name="staffing-categories" class="form-control" id="inputDepartmentName">
-                      <option selected disabled>Specialties</option>
-                      <option value="Carers">Carers </option>
-                      <option value="Registered General & Mental Nurses">Registered General & Mental Nurses </option>
-                      <option value="Kitchen Assistants ">Kitchen Assistants </option>
-                      <option value="Chefs">Chefs</option>
-                      <option value="Housekeepers">Housekeepers</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button type="submit" class="btn ">Submit Now</button>
-                </div>
-              </form>
-            </div> -->
           </div>
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <div class="img-box">
-              <img src="./images/vah_png.png" alt="Logo" class="rounded shadow shadow-lg">
+              <img src="./images/j.png" alt="Logo" class="rounded shadow shadow-lg">
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -168,31 +137,31 @@
         </h2>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <a href="./services.html#rgm-nurses" class="box">
             <div class="img-box">
-              <h1><span><i class="fa fa-thermometer-empty" aria-hidden="true"></i></span></h1>
+              <h1><span><i class="fa fa-medkit" aria-hidden="true"></i></span></h1>
             </div>
             <div class="detail-box">
               <h5>
-                Registered General & Mental Nurses
+                Recruitment
               </h5>
             </div>
           </a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <a href="./services.html#carers" class="box">
             <div class="img-box">
-              <h1><i class="fa fa-medkit" aria-hidden="true"></i></h1>
+              <h1><i class="fa fa-hand-holding-medical"></i></h1>
             </div>
             <div class="detail-box" data-bs-target="#carers" data-bs-toggle="offcanvas">
               <h5>
-                Carers
+                Care Services
               </h5>
             </div>
           </a>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <a href="./services.html#chefs" class="box">
             <div class="img-box">
               <h1><i class="fa fa-address-card-o" aria-hidden="true"></i></h1>
@@ -227,7 +196,7 @@
               </h5>
             </div>
           </a>
-        </div>
+        </div> -->
         <!-- <div class="col-md-4">
           <a href="#" class="box">
             <div class="img-box">
@@ -280,22 +249,37 @@
     </div>
   </section>
 
+  <!-- About -->
+  <div class="container mt-5">
+    <div class="rounded p-5 text-bg-light shadow shadow-lg">
+      <h3 class="mt-3 text-center fw-bold text-capitalize">our commitment</h3>
+      <p class="text-center">We value your trust and are dedicated to responding promptly to your inquiries. Share your challenges and we'll craft a solution that meets your care or staffing needs. Our friendly team is available to offer guidance and support.</p>
+    </div>
+  </div>
+<!-- Contact Us -->
+  <!-- Header -->
+  <div class="container mt-5">
+    <div class="text-bg-light shadow shadow-lg rounded p-3">
+      <h3 class="text-center fw-bold text-capitalize">contact us - let's start a conversation</h3>
+      <p class="text-center">Whether you're seeking a caring hand at home or a dynamic professional to join your healthcare facility, our team is ready to help.</p>
+    </div>
+  </div>
   <!-- end about section -->
   <!-- Apply Now -->
-  <div class="container mt-5">
+  <div class="container mt-4">
     <div class="rounded text-bg-light shadow shadow-lg">
       <div class="row">
         <div class="col-sm-6">
-          <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=City+Road+London+UK" width="600" height="400" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+          <!-- <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=City+Road+London+UK" width="600" height="400" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe> -->
+          <p class="text-center" style="margin-top: 180px; padding: 25px; font-size: 22px; font-variant: small-caps;">
+            Fill in the <span class="fw-bold">Form</span> with your details, and we'll get back to you with a personalized response. Let's work together to build a healthier, happier community.
+          </p>
         </div>
         <div class="col-sm-6 p-5">
-          <h3 class="mt-3 fw-bold text-center text-capitalize">apply now</h3>
-          <p class="text-center">
-            Fill in the <span class="fw-bold">Form</span> below with your details, and we'll get back to you with a personalized response. Let's work together to build a healthier, happier community.
-          </p>
+          <h3 class="mt-3 fw-bold text-center" style="font-variant: small-caps;">fill in the form</h3>
       <form action="#" class="mt-3" accept=".docx,.pdf">
         <div class="form-group mb-3">
-          <label for="fullname">Fullname</label>
+          <label for="fullname" style="font-variant: small-caps;">Fullname</label>
           <input type="text" id="fullname" class="form-control" placeholder="Enter Fullname">
         </div>
         <div class="form-group mb-3">
@@ -307,10 +291,10 @@
           <input type="tel" id="phone-number" class="form-control" placeholder="Enter Telephone">
         </div>
         <div class="form-group">
-          <label for="cv">Attach CV</label>
-          <input id="cv" type="file" class="form-control pb-5">
+          <label for="message">Message</label>
+          <textarea class="form-control" name="Message" id="message"></textarea>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <select class="form-select" id="referrer">
             <option value="Social Media">Social Media</option>
             <option value="Website">Website</option>
@@ -318,7 +302,7 @@
             <option value="Other">Other</option>
             <option selected disabled>How did you hear about us?</option>
           </select>
-        </div><br>
+        </div><br> -->
         <div class="mb-3 mt-5 d-flex justify-content-center">
           <input type="reset" class="btn btn-secondary me-3" value="Start Over" style="margin-right: 9px;">
           <input type="submit" class="btn btn-primary" value="Submit">
@@ -328,16 +312,8 @@
       </div>
     </div>
   </div>
-  <!-- Contact Us -->
-  <!-- Header -->
-  <div class="container" style="margin-top: 68px;">
-    <div class="text-bg-light shadow shadow-lg rounded p-3">
-      <h3 class="text-center fw-bold text-capitalize">contact us - let's start a conversation</h3>
-      <p class="text-center">Whether you're seeking a caring hand at home or a dynamic professional to join your healthcare facility, our team is ready to help.</p>
-    </div>
-  </div>
   <!-- Address -->
-  <div class="container mt-4">
+  <div class="container mt-5">
     <div class="text-bg-light rounded p-3 shadow shadow-lg">
       <h4 class="text-center fw-bold text-center text-capitalize">get in touch</h4>
       <div class="row mt-3">
@@ -360,13 +336,6 @@
           </ul>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- About -->
-  <div class="container mt-4">
-    <div class="rounded p-5 text-bg-light shadow shadow-lg">
-      <h3 class="mt-3 text-center fw-bold text-capitalize">our commitment</h3>
-      <p class="text-center">We value your trust and are dedicated to responding promptly to your inquiries. Share your challenges and we'll craft a solution that meets your care or staffing needs. Our friendly team is available to offer guidance and support.</p>
     </div>
   </div>
   <!-- info section -->
