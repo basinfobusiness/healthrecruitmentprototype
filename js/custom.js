@@ -8,6 +8,10 @@ function getYear() {
 
 getYear();
 
+(()=>{
+    alert('updating site, check back on later');
+})();
+
 // nice select
 $(document).ready(function () {
     $('select').niceSelect();
