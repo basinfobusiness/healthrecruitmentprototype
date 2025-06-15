@@ -9,7 +9,7 @@ function getYear() {
 getYear();
 
 (()=>{
-    alert('updating site, check back on later');
+    alert('site under maintenance. Check back on later');
 })();
 
 // nice select
