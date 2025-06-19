@@ -9,6 +9,10 @@ body{
 	text-decoration: underline;
 }
 
+.category{
+	cursor: pointer;
+}
+
 #developer{
 	color: black;
 	text-decoration: none;
@@ -25,4 +29,53 @@ body{
 
 .social-icon:hover{
 	background-color: black;
+}
+
+.icons:hover{
+	color: #303841;
+}
+
+.read-more-div{
+	margin: 0 auto;
+}
+
+.read-more{
+  padding: 10px 45px;
+  background-color: #303841;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 1px solid #303841;
+  outline: none;
+  width: 100%;
+}
+
+.read-more:hover{
+	background-color: transparent;
+  color: #303841;
+  outline: black;
+  border: 1px solid #303841;
+}
+
+.apply-btn{
+	display: inline-block;
+  padding: 5px 15px;
+  width: 37%;
+  background-color: #07acd0;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 1px solid #07acd0;
+  outline: none;
+  text-align: center;
+  margin: 13px;
+}
+
+.apply-btn:hover{
+	background-color: transparent;
+  color: #07acd0;
+  outline: black;
+  border: 1px solid #07acd0;
 }
