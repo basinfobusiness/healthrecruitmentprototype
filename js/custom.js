@@ -1,11 +1,16 @@
-(()=>{
-	'use strict'
-	getYear();
-})();
+const currentDate = new Date();
+function contactFunction(){
+    document.writeln("Loading... please wait");
+    window.location.assign("./index.html#contact-us")
+}
 
 // to get current year
 function getYear() {
-    var currentDate = new Date();
-    var currentYear = currentDate.getFullYear();
+    let currentYear = currentDate.getFullYear();
     document.querySelector("#displayYear").innerHTML = currentYear;
 }
+
+(()=>{
+    'use strict'
+    getYear();
+})();

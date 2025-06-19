@@ -14,31 +14,55 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="images/site.webmanifest">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <script async src="./js/custom.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<noscript>Your browser does not support javascript</noscript>
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm navbar-dark" style="background: #07BBE2;">
-		<div class="container-fluid">
-      <img class="rounded-pill" src="./images/png_VahCare.png" alt="logo" style="width: 80px;">
-			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="mainmenu">
-				<ul class="navbar-nav mx-auto">
-					<li class="nav-item">
-						<a href="./index.html" class="nav-link text-uppercase">home</a>
-					</li>
-					<li class="nav-item">
-						<a href="./about.html" class="nav-link text-uppercase">about</a>
-					</li>
-					<li class="nav-item">
-						<a href="./job.html" class="nav-link active text-uppercase">jobs</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+	  	<div class="container-fluid">
+	  		<div class="navbar-header">
+	  		  <a href="javascript:void(0)" class="navbar-brand">
+	  		    <img src="./images/png_VahCare.png" title="Logo" class="ms-5 rounded-pill" style="width: 80px;" alt="Logo">
+	  	      </a>
+	  		</div>
+	  		<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu">
+	  			<span class="navbar-toggler-icon"></span>
+	  		</button>
+	  		<div class="collapse navbar-collapse" id="mainmenu">
+	  		  <ul class="navbar-nav mx-auto">
+				  <li class="nav-item">
+					<a href="./index.html" class="nav-link text-uppercase">home</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="./about.html" class="nav-link text-uppercase">about</a>
+				  </li>
+				  <li class="nav-item">
+					<a href="./job.html" class="nav-link text-uppercase">jobs</a>
+				  </li>
+				  <li class="nav-item dropdown">
+  					  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Type of Care & Support</a>
+					  <ul class="dropdown-menu">
+					    <li><a class="dropdown-item" href="#">Autism Care</a></li>
+					    <li><a class="dropdown-item" href="#">Hospital Care</a></li>
+					    <li><a class="dropdown-item" href="#">Dementia Care</a></li>
+					    <li><a class="dropdown-item" href="#">Elderly Care</a></li>
+					    <li><a class="dropdown-item" href="#">Learning Disability Support</a></li>
+					    <li><a class="dropdown-item" href="#">Mental Health Support</a></li>
+					    <li><a class="dropdown-item" href="#">16+ Supported Living</a></li>
+					    <li><a class="dropdown-item" href="#">Adult Supported Living</a></li>
+					    <li><a class="dropdown-item" href="#">Child Support Care</a></li>
+					    <li><a class="dropdown-item" href="#">24-Hour-Live-In-Care</a></li>
+
+					  </ul>
+				  </li>
+		      </ul>
+		      <form action="" class="d-flex">
+				  <button class="btn btn-primary text-capitalize me-3" onclick="contactFunction()">contact us</button>
+		      </form>
+	  		</div>
+	  	</div>
+	  </nav>
 	<!-- Display -->
 	<div class="container mt-3">
 		<div class="carousel slide" id="main-display" data-bs-ride="carousel">

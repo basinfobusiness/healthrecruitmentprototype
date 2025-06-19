@@ -1,5 +1,5 @@
 function recruitmentRoute() {
-	window.location.assign("./about.html");
+	window.location.assign("./job.html");
 }
 
 function careServicesRoute() {

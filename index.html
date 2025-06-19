@@ -26,18 +26,18 @@
 </head>
 <body>
 	<main>
-	  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #08BBE3;">
+	  <nav class="navbar navbar-expand-sm navbar-light bg-light">
 	  	<div class="container-fluid">
 	  		<div class="navbar-header">
 	  		  <a href="javascript:void(0)" class="navbar-brand">
-	  		    <img src="./images/png_VahCare.png" title="Logo" class="rounded-pill" style="width: 80px;" alt="Logo">
+	  		    <img src="./images/png_VahCare.png" title="Logo" class="ms-5 rounded-pill" style="width: 80px;" alt="Logo">
 	  	      </a>
 	  		</div>
 	  		<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu">
 	  			<span class="navbar-toggler-icon"></span>
 	  		</button>
 	  		<div class="collapse navbar-collapse" id="mainmenu">
-	  		  <ul class="nav navbar-nav mx-auto">
+	  		  <ul class="navbar-nav mx-auto">
 				  <li class="nav-item">
 					<a href="javascript:void(0)" class="nav-link active text-uppercase">home</a>
 				  </li>
@@ -47,7 +47,26 @@
 				  <li class="nav-item">
 					<a href="./job.html" class="nav-link text-uppercase">jobs</a>
 				  </li>
-		    </ul>
+				  <li class="nav-item dropdown">
+  					  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Type of Care & Support</a>
+					  <ul class="dropdown-menu">
+					    <li><a class="dropdown-item" href="#">Autism Care</a></li>
+					    <li><a class="dropdown-item" href="#">Hospital Care</a></li>
+					    <li><a class="dropdown-item" href="#">Dementia Care</a></li>
+					    <li><a class="dropdown-item" href="#">Elderly Care</a></li>
+					    <li><a class="dropdown-item" href="#">Learning Disability Support</a></li>
+					    <li><a class="dropdown-item" href="#">Mental Health Support</a></li>
+					    <li><a class="dropdown-item" href="#">16+ Supported Living</a></li>
+					    <li><a class="dropdown-item" href="#">Adult Supported Living</a></li>
+					    <li><a class="dropdown-item" href="#">Child Support Care</a></li>
+					    <li><a class="dropdown-item" href="#">24-Hour-Live-In-Care</a></li>
+
+					  </ul>
+				  </li>
+		      </ul>
+		      <form action="" class="d-flex">
+				  <button class="btn btn-primary text-capitalize me-3" onclick="location.href='#contact-us'">contact us</button>
+		      </form>
 	  		</div>
 	  	</div>
 	  </nav>
@@ -63,13 +82,13 @@
 		  <!-- The slideshow/carousel -->
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
-		      <img src="./images/vahcare-recruitment-img-1.png" alt="recruitment banner image 1" class="img-fluid d-block w-100 h-25">
+		      <img src="./images/vahcare-recruitment-img-1.png" alt="recruitment banner image 1" class="img-fluid d-block w-100 h-25" style="opacity: 0.85;">
 		    </div>
 		    <div class="carousel-item">
-		      <img src="./images/vahcare-recruitment-img-2.png" alt="recruitment banner image 2" class="img-fluid d-block w-100">
+		      <img src="./images/vahcare-recruitment-img-2.png" alt="recruitment banner image 2" class="img-fluid d-block w-100 h-25">
 		    </div>
 		    <div class="carousel-item">
-		      <img src="./images/vahcare-recruitment-img-3.png" alt="recruitment banner image 3" class="img-fuid d-flex w-100">
+		      <img src="./images/vahcare-recruitment-img-3.png" alt="recruitment banner image 3" class="img-fuid d-block w-100 h-25">
 		    </div>
 		  </div>
 
@@ -82,20 +101,32 @@
 		  </button>
 	  </div>
 	  <div class="container mt-5">
-	  	<h3 class="text-center fw-bold text-uppercase">choose from categories</h3>
-	  	<div class="row mt-5">
-	  		<div class="col-md-6 mb-3">
-	  			<div class="text-bg-dark text-center p-5 category w-100" id="recruitment">
-	  				<h3><i class="fa fa-medkit" aria-hidden="true"></i></h3>
-	  				<p class="heading-4 text-capitalize fw-bold">recruitment</p>
-	  			</div>
-	  		</div>
-	  		<div class="col-md-6">
-	  			<div class="text-bg-dark text-center p-5 category w-100" id="care-services">
-	  				<h3><i class="fa fa-heartbeat" aria-hidden="true"></i></h3>
-	  				<h4 class="text-capitalize fw-bold">care services</h4>
-	  			</div>
-	  		</div>
+	  	<div class="category rounded p-3 text-light">
+	  		<h2 class="text-center fw-bold text-uppercase">choose from categories</h2>
+	  		<h3 class="text-center fw-bold text-capitalize">care services that empower lives</h3>
+	  		<p class="text-center">
+          	  Our care services are designed with the utmost respect for your dignity and independence. We create a nurturing environment that not only meets practical needs but also enriches the spirit.
+            </p>
+            <div class="d-flex justify-content-center">
+              <div class="btn-group">
+		  	    <button type="button" class="btn btn-primary" id="recruitment">Recruitment</button>
+			    <div class="btn-group">
+			    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Care Services</button>
+			    <ul class="dropdown-menu">
+			      <li><a class="dropdown-item" href="#">Autism Care</a></li>
+				  <li><a class="dropdown-item" href="#">Hospital Care</a></li>
+				  <li><a class="dropdown-item" href="#">Dementia Care</a></li>
+				  <li><a class="dropdown-item" href="#">Elderly Care</a></li>
+				  <li><a class="dropdown-item" href="#">Learning Disability Support</a></li>
+				  <li><a class="dropdown-item" href="#">Mental Health Support</a></li>
+				  <li><a class="dropdown-item" href="#">16+ Supported Living</a></li>
+				  <li><a class="dropdown-item" href="#">Adult Supported Living</a></li>
+				  <li><a class="dropdown-item" href="#">Child Support Care</a></li>
+				  <li><a class="dropdown-item" href="#">24-Hour-Live-In-Care</a></li>
+			    </ul>
+			    </div>
+		      </div>
+            </div>
 	  	</div>
 	  </div>
 	  <div class="container mt-5">
@@ -138,7 +169,7 @@
 	  </div>
 	  <div class="container mt-5">
 	  	<div class="shadow-lg p-5">
-	  		<div class="row">
+	  		<div class="row" id="contact-us">
 	  			<div class="col my-auto">
 	  				<p class="text-center fs-5">
 	  					Fill in the <span class="fw-bold">Form</span> with your details, and we'll get back to you with a personalized response. Let's work together to build a healthier, happier community.
