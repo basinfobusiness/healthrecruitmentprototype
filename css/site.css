@@ -1,6 +1,7 @@
 body{
 	user-select: none;
 }
+
 .contact-email-link{
 	text-decoration: none;
 }
@@ -10,7 +11,9 @@ body{
 }
 
 .category{
-	cursor: pointer;
+	 background-image: url('../images/background-main.png');
+   background-size: cover; 
+   background-position: center;
 }
 
 #developer{
@@ -35,9 +38,9 @@ body{
 	color: #303841;
 }
 
-.read-more-div{
+/*.read-more-div{
 	margin: 0 auto;
-}
+}*/
 
 .read-more{
   padding: 10px 45px;
@@ -48,7 +51,6 @@ body{
   transition: all .3s;
   border: 1px solid #303841;
   outline: none;
-  width: 100%;
 }
 
 .read-more:hover{
