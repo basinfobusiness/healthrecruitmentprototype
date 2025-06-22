@@ -10,7 +10,7 @@ specialtyCategory.addEventListener('change', () => {
     console.log('checking');
       for (let i = 0; searchTerm.length; i++) {
         const item = searchTermRow[i];
-        if (searchTerm[i] == specialty[i]) {
+        if (searchTerm[i] === specialty[i]) {
           matchspecialty.push(searchTerm[i]);
           // const item = searchTerm[i]
           // item.innerHTML = `
@@ -25,9 +25,10 @@ specialtyCategory.addEventListener('change', () => {
           //   </div>
           // `;
           console.log(specialty[i]);
+          return;
         }else{
           item.style.display = "none";
-          console.log('did not match with ' + searchTerm[i].textContent);
+          document.getElementById("searchres3").textContent = "nothing found";
         }
       }
     }
