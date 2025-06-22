@@ -6,4 +6,9 @@ function careServicesRoute() {
 	window.location.assign("./services.html");
 }
 
-export { recruitmentRoute, careServicesRoute }
+function applyNowFunction(){
+	console.log("i got executed")
+    window.location.assign("./index.html#contact-us")
+}
+
+export { recruitmentRoute, careServicesRoute, applyNowFunction}
