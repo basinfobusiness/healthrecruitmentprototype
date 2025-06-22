@@ -1,0 +1,147 @@
+body{
+  font-family: sans-serif;
+	user-select: none;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+main{
+  font-size: 14pt;
+}
+
+.custom-top{
+  margin-top: 150px;
+}
+
+main nav{
+  font-size: 12pt;
+}
+
+footer{
+  font-size: 12pt;
+}
+
+.heading{
+  font-variant: small-caps;
+}
+
+.about-services-list{
+  list-style-type: none;
+  letter-spacing: 3px;
+  word-wrap: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+.about-services-list li {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.list-itm{
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.services-list{
+  letter-spacing: 3px;
+  word-wrap: 2px;
+}
+
+.our-image{
+  width: 300px;
+  -webkit-transition: width 4s;
+  -o-transition: width 4s;
+}
+
+.our-image:hover{
+  width: 500px;
+}
+
+.contact-email-link{
+	text-decoration: none;
+}
+
+.notification{
+  font-variant: small-caps;
+}
+
+.contact-email-link:hover{
+	text-decoration: underline;
+}
+
+.category{
+	 background-image: url('../images/background-main.png');
+   background-size: cover; 
+   background-position: center;
+}
+
+#developer{
+	color: black;
+	text-decoration: none;
+}
+
+.services-info{
+	color: #17a2b8;
+  font-variant: small-caps;
+}
+
+.social-icon:hover{
+	background-color: black;
+}
+
+.icons:hover{
+	color: #303841;
+}
+
+/*.read-more-div{
+	margin: 0 auto;
+}*/
+
+.read-more{
+  padding: 10px 45px;
+  background-color: #303841;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 1px solid #303841;
+  outline: none;
+}
+
+.read-more:hover{
+	background-color: transparent;
+  color: #303841;
+  outline: black;
+  border: 1px solid #303841;
+}
+
+.apply-btn{
+	display: inline-block;
+  padding: 5px 15px;
+  width: 37%;
+  background-color: #07acd0;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 1px solid #07acd0;
+  outline: none;
+  text-align: center;
+  margin: 13px;
+}
+
+.apply-btn:hover{
+	background-color: transparent;
+  color: #07acd0;
+  outline: black;
+  border: 1px solid #07acd0;
+}
+
+@media (min-width: 768px){
+  .carousel-item{
+    object-position: center;
+  }
+}
