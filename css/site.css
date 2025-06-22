@@ -120,7 +120,7 @@ footer{
 
 .apply-btn{
 	display: inline-block;
-  padding: 5px 15px;
+  padding: 3px 11px;
   width: 37%;
   background-color: #07acd0;
   color: #ffffff;
@@ -130,7 +130,7 @@ footer{
   border: 1px solid #07acd0;
   outline: none;
   text-align: center;
-  margin: 13px;
+  margin: 10px;
 }
 
 .apply-btn:hover{
@@ -141,7 +141,15 @@ footer{
 }
 
 @media (min-width: 768px){
-  .carousel-item{
+  .#demo{
     object-position: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px){
+  #demo{
+    object-position: center;
+    margin-top: 65px;
   }
 }
