@@ -1,9 +1,71 @@
 body{
+  font-family: sans-serif;
 	user-select: none;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+main{
+  font-size: 14pt;
+}
+
+.custom-top{
+  margin-top: 150px;
+}
+
+main nav{
+  font-size: 12pt;
+}
+
+footer{
+  font-size: 12pt;
+}
+
+.heading{
+  font-variant: small-caps;
+}
+
+.about-services-list{
+  list-style-type: none;
+  letter-spacing: 3px;
+  word-wrap: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+.about-services-list li {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.list-itm{
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.services-list{
+  letter-spacing: 3px;
+  word-wrap: 2px;
+}
+
+.our-image{
+  width: 300px;
+  -webkit-transition: width 4s;
+  -o-transition: width 4s;
+}
+
+.our-image:hover{
+  width: 500px;
 }
 
 .contact-email-link{
 	text-decoration: none;
+}
+
+.notification{
+  font-variant: small-caps;
 }
 
 .contact-email-link:hover{
@@ -21,13 +83,9 @@ body{
 	text-decoration: none;
 }
 
-.services-list{
-  letter-spacing: 3px;
-  word-wrap: 2px;
-}
-
 .services-info{
 	color: #17a2b8;
+  font-variant: small-caps;
 }
 
 .social-icon:hover{
@@ -80,4 +138,10 @@ body{
   color: #07acd0;
   outline: black;
   border: 1px solid #07acd0;
+}
+
+@media (min-width: 768px){
+  .carousel-item{
+    object-position: center;
+  }
 }
