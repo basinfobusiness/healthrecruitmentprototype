@@ -56,6 +56,10 @@ footer{
   -o-transition: width 4s;
 }
 
+.count {
+  transition: all 0.5s ease-in-out;
+}
+
 .our-image:hover{
   width: 500px;
 }
@@ -142,14 +146,37 @@ footer{
 
 @media (min-width: 768px){
   .#demo{
-    object-position: center;
     margin-top: 30px;
   }
+  .main-carousel{
+    /*object-position: center;
+    object-fit: cover;*/
+    /*height: 100vh;*/
+    margin-top: 20px;
+  }
 }
-
-@media (max-width: 576px){
+/*(max-height: 768px) and (max-width: 1024px)*/
+@media (max-width: 576px) and (max-height: 768px){
   #demo{
     object-position: center;
     margin-top: 65px;
   }
+  #commitments{
+    display: none;
+  }
+  .main-carousel{
+    /*object-position: center;
+    object-fit: cover;*/
+    /*height: 100vh;*/
+    max-height: 100%;
+    margin-top: 20px;
+  }
+}
+
+.radial-gradient {
+  background-image: radial-gradient(#b8512e, #ffe6cc);
+}
+
+.linear-gradient {
+  background-image: linear-gradient(to right, #b8512e, #743b52);
 }
