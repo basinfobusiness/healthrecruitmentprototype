@@ -4,7 +4,10 @@ const currentDate = new Date();
 const serviceslist = document.querySelectorAll(".about-services-list li");
 const currentYear = currentDate.getFullYear();
 const yearLabel = document.querySelector("#displayYear");
-const carouimage = document.querySelectorAll(".main-carousel");
+const carouimage = document.getElementById("main-carousel");
+const carousecondImage = document.getElementById("second-carousel");
+const carouthirdImage = document.getElementById("third-carousel");
+
 
 // to get current year
 function getYear() {
@@ -12,7 +15,7 @@ function getYear() {
 }
 
 (()=>{
-    getYear();
+    // getYear();
 
     serviceslist.forEach((item, index) =>{
         setTimeout(() =>{
@@ -29,12 +32,14 @@ function applyNow(){
 }
 
 function userOs(){
-     if (navigator.userAgent == "Android") {
-        for (let i = carouimage.length - 1; i >= 0; i--) {
-            carouimage[i].src = "./images/mobile-healthservices.png";
-        }
+     if (navigator.platform != "Android") {
+            carouimage.src = "./images/vahcare-home-img.png";
+            carousecondImage.src = "./images/vahcare-home-img.png";
+            carouthirdImage.src = "./images/vahcare-home-img.png";
+            // alert('hello world')
     }else{
-        console.log("nothing to show OS: " + navigator.userAgent);
+        console.log("nothing to show OS: " + navigator.platform);
+        // alert('problem')
     }
 }
 
