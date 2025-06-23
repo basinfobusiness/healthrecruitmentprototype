@@ -8,18 +8,18 @@ const carouimage = document.querySelectorAll(".main-carousel");
 
 // to get current year
 function getYear() {
-    yearLabel.textContent = currentYear;
+    yearLabel.textContent = currentYear.toString();
 }
 
 (()=>{
     getYear();
 
     serviceslist.forEach((item, index) =>{
-    setTimeout(() =>{
-        item.style.opacity = 1;
-    }, index * 200); // Adjust the animation speed
-});
-    userOs()
+        setTimeout(() =>{
+            item.style.opacity = 1;
+        }, index * 200); // Adjust the animation speed
+    });
+    userOs();
     console.log(navigator.userAgentData);
 })();
 

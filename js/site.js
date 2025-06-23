@@ -42,7 +42,7 @@ function animateCount() {
     if (currentCount >= clientCount) {
       clearInterval(interval);
     }
-  }, 30); // Adjust the interval time to control the animation speed
+  }, 90); // Adjust the interval time to control the animation speed
 }
 
 commitment.addEventListener('mouseover', () => {

@@ -5,7 +5,7 @@ const specialty = ["Registered General & Mental Nurses","Health Assistants","Kit
 const matchspecialty = [];
 
 specialtyCategory.addEventListener('change', () => {
-  alert('specialty category is been set');
+  console.log('specialty category is been set');
   for(let i = 0; i < searchTermRow.length; i++){
     console.log('checking');
       for (let i = 0; searchTerm.length; i++) {
@@ -25,12 +25,11 @@ specialtyCategory.addEventListener('change', () => {
           //   </div>
           // `;
           console.log(specialty[i]);
-          return;
         }else{
           item.style.display = "none";
-          document.getElementById("searchres3").textContent = "nothing found";
         }
       }
+      // console.log(matchspecialty[i]);
     }
     console.log(matchspecialty[i]);
   // for (let i = 0; i < listItems.length; i++) {
