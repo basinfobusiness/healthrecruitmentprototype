@@ -34,9 +34,11 @@ function applyNow(){
 function userOs(){
      if (navigator.platform != "Android") {
             carouimage.src = "./images/vahcare-home-img.png";
+            carouimage.alt = "recruitment banner image 1"
             carousecondImage.src = "./images/vahcare-home-img.png";
+            carousecondImage.alt = "recruitment banner image 2"
             carouthirdImage.src = "./images/vahcare-home-img.png";
-            // alert('hello world')
+            carouthirdImage.alt = "recruitment banner image 3"
     }else{
         console.log("nothing to show OS: " + navigator.platform);
         // alert('problem')
