@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Benit Apollo Solutions">
+		<meta name="keywords" content="" />
+		<meta name="description" content="Informational and initial + functional prototype" />
+		<meta http-equiv="refresh" content="3600">
+		<!--
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		-->
+		<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+		<title>VAH Care</title>
+		<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+		<script src="../assets/js/color-modes.js"></script>
+		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+		<meta name="theme-color" content="#712cf9">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
+		<link href="blog.css" rel="stylesheet">
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+			}
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+			.b-example-divider {
+				width: 100%;
+				height: 3rem;
+				background-color: #0000001a;
+				border: solid rgba(0,0,0,.15);
+				border-width: 1px 0;
+				box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;
+			}
+			.b-example-vr {
+				flex-shrink: 0;
+				width: 1.5rem;
+				height: 100vh;
+			}
+			.bi {
+				vertical-align: -.125em;
+				fill: currentColor;
+			}
+			.nav-scroller {
+				position: relative;
+				z-index: 2;
+				height: 2.75rem;
+				overflow-y: hidden;
+			}
+			.nav-scroller .nav {
+				display: flex;
+				flex-wrap: nowrap;
+				padding-bottom: 1rem;
+				margin-top: -1px;
+				overflow-x: auto;
+				text-align: center;
+				white-space: nowrap;
+				-webkit-overflow-scrolling: touch;
+			}
+			.btn-bd-primary {
+				--bd-violet-bg: #712cf9;
+				--bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+				--bs-btn-font-weight: 600;
+				--bs-btn-color: var(--bs-white);
+				--bs-btn-bg: var(--bd-violet-bg);
+				--bs-btn-border-color: var(--bd-violet-bg);
+				--bs-btn-hover-color: var(--bs-white);
+				--bs-btn-hover-bg: #6528e0;
+				--bs-btn-hover-border-color: #6528e0;
+				--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+				--bs-btn-active-color: var(--bs-btn-hover-color);
+				--bs-btn-active-bg: #5a23c8;
+				--bs-btn-active-border-color: #5a23c8;
+			}
+			.bd-mode-toggle {
+				z-index: 1500;
+			}
+			.bd-mode-toggle .bi {
+				width: 1em;
+				height: 1em;
+			}
+			.bd-mode-toggle .dropdown-menu .active .bi {
+				display: block !important;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- SVG Icons -->
+		<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+			<symbol id="check2" viewBox="0 0 16 16">
+				<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+			</symbol>
+			<symbol id="circle-half" viewBox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+			</symbol>
+			<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+				<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+				<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+			</symbol>
+			<symbol id="sun-fill" viewBox="0 0 16 16">
+				<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+			</symbol>
+			<symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+				<circle cx="12" cy="12" r="10"></circle>
+				<path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+			</symbol>
+			<symbol id="cart" viewBox="0 0 16 16">
+				<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+			</symbol>
+			<symbol id="chevron-right" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+			</symbol>
+		</svg>
+
+		<!-- Theme Toggle Dropdown -->
+		<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+			<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+				<svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg>
+				<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+				<li>
+					<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+						<svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
+						Light
+						<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+						<svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
+						Dark
+						<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+					</button>
+				</li>
+				<li>
+					<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+						<svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg>
+						Auto
+						<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
+					</button>
+				</li>
+			</ul>
+		</div>
+
+		<div class="container">
+			<header class="border-bottom lh-1 py-3">
+				<div class="row flex-nowrap justify-content-between align-items-center">
+					<div class="col-4 pt-1">
+						<!-- <a class="link-secondary" href="#">Subscribe</a> -->
+						<img src="../images/png_VahCare.png" alt="Logo" class="img-fluid" style="width: 80px;">
+					</div>
+					<div class="col-4 text-center">
+						<a class="blog-header-logo text-body-emphasis text-decoration-none text-capitalize" href="../index.html">care & support</a>
+					</div>
+					<div class="col-4 d-flex justify-content-end align-items-center">
+						<!-- <a class="link-secondary" href="#" aria-label="Search">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+						</a> -->
+						<a class="btn btn-sm btn-outline-secondary" href="../index.html#contact-us">Contact</a>
+					</div>
+				</div>
+			</header>
+			<div class="nav-scroller py-1 mb-3 border-bottom">
+				<nav class="nav nav-underline justify-content-between">
+					<a class="nav-item nav-link link-body-emphasis" href="./autism-care.html">Autism Care</a>
+					<a class="nav-item nav-link link-body-emphasis active" href="javascript:void(0)">Hospital Care</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">Dementia Care</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">Elderly Care</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">Learning Disability Support</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">Mental Health Support</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">16+ Supported Living</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">Adult Supported Living</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">Child Supported Care</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">Child Support Care</a>
+					<a class="nav-item nav-link link-body-emphasis" href="#">24-Hour-Live-In-Support</a>
+					<!-- <a class="nav-item nav-link link-body-emphasis" href="#">Travel</a> -->
+				</nav>
+			</div>
+		</div>
+
+		<main class="container">
+			<div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+				<div class="col-lg-6 px-0">
+					<h1 class="display-4 fst-italic">Hospital Care</h1>
+					<p class="lead my-3">Providing Compassionate and Quality Medical Services</p>
+					<p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<div class="col-md-6">
+					<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+						<div class="col p-4 d-flex flex-column position-static">
+							<strong class="d-inline-block mb-2 text-primary-emphasis">Advanced Medical Technology</strong>
+							<h3 class="mb-0">Specialized Care</h3>
+							<div class="mb-1 text-body-secondary">Nov 12</div>
+							<p class="card-text mb-auto">We are equipped with state-of-the-art medical equipment and technology, enabling accurate diagnoses and effective treatments.</p>
+							<a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+								Continue reading
+								<svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+							</a>
+						</div>
+						<div class="col-auto d-none d-lg-block">
+							<svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img" height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect>
+								<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+						<div class="col p-4 d-flex flex-column position-static">
+							<strong class="d-inline-block mb-2 text-success-emphasis">Patient-Centered Care</strong>
+							<h3 class="mb-0">Comprehensive Care</h3>
+							<div class="mb-1 text-body-secondary">Nov 11</div>
+							<p class="mb-auto">We strive to provide patient-centered care, prioritizing patients' needs, comfort, and dignity.</p>
+							<a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+								Continue reading
+								<svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+							</a>
+						</div>
+						<div class="col-auto d-none d-lg-block">
+							<svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img" height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect>
+								<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row g-5">
+				<div class="col-md-8">
+					<h3 class="pb-4 mb-4 fst-italic border-bottom">
+						Why Choose VAH Care for Hospital Care?
+					</h3>
+
+					<article class="blog-post">
+						<h2 class="display-5 link-body-emphasis mb-1">Specialized Expertise</h2>
+						<!-- <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p> -->
+						<p>VAH Care have specialized healthcare professionals with expertise in various medical conditions, ensuring patients receive the best possible care.</p>
+						<hr>
+						<p>Our team is dedicated to staying up-to-date with the latest advancements in medical research and treatment options.</p>
+						<h2>Supportive Environment</h2>
+						<p>We provide a supportive environment, with amenities and services designed to promote patients' comfort and well-being.</p>
+						<blockquote class="blockquote">
+							<p>VAH Care strive to create a supportive environment for all patients, ensuring they feel safe and valued.</p>
+						</blockquote>
+						<p>We involve a team of healthcare professionals, including doctors, nurses, therapists, and support staff, working together to provide comprehensive care.</p>
+						<h3>Advanced Medical Technology</h3>
+						<p>VAH Care provide 24/7 emergency services, ensuring timely treatment for patients with acute injuries or illnesses.</p>
+						<ul>
+							<li><strong>Personalized Care Plans:</strong> We develop tailored care plans that address the unique challenges and strengths of each individual.</li>
+							<li><strong>Family Involvement:</strong> We believe in involving families in the care process to ensure a supportive environment.</li>
+							<li><strong>Ongoing Support:</strong> Our team provides continuous support and resources to individuals and their families.</li>
+						</ul>
+						<p>VAH Care is a critical component of the healthcare system, providing patients with comprehensive medical treatment and compassionate care. We are equipped with skilled healthcare professionals, advanced medical technology, and specialized facilities to diagnose and treat a wide range of medical conditions.</p>
+						<ol>
+							<li><strong>Timely Treatment:</strong>We provide timely treatment for acute medical conditions, reducing the risk of complications and improving outcomes.</li>
+							<li><strong>Comprehensive Care:</strong> We offer a wide range of services to address the diverse needs of our patients.</li>
+							<li><strong>Supportive Environment:</strong> We create a welcoming and inclusive atmosphere for all patients and their families.</li>
+						</ol>
+						<p>At VAH Care, we are committed to providing comprehensive support for individuals with hospital care needs. Our team of experts works closely with each individual and their family to create a nurturing environment that fosters growth and independence.</p>
+						<!-- <dl>
+							<dt>Autism Spectrum Disorder (ASD)</dt>
+							<dd>A developmental disorder that affects communication and behavior</dd>
+							<dt>Attention Deficit Hyperactivity Disorder (ADHD)</dt>
+							<dd>A neurodevelopmental disorder characterized by inattention, hyperactivity, and impulsivity</dd>
+							<dt>Obsessive-Compulsive Disorder (OCD)</dt>
+							<dd>A mental health disorder characterized by intrusive thoughts and repetitive behaviors</dd>
+						</dl> -->
+						<h2>How we support individuals with hospital care needs</h2>
+						<p>At VAH Care, we recognize the unique challenges faced by individuals with hospital care needs. Our approach focuses on providing comprehensive support tailored to each patient's situation.</p>
+						<ul>
+							<li>Comprehensive assessments to identify specific needs</li>
+							<li>Personalized care plans that address medical and emotional well-being</li>
+							<li>Collaboration with families to ensure a supportive care environment</li>
+						</ul>
+						<!-- <p>A compassionate team ensure that individuals with autism receive compassion</p>
+						<h2> </h2>
+						<p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+						<h3>Sub-heading</h3>
+						<p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+						<pre><code>Example code block</code></pre>
+						<p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p> -->
+					</article>
+						<h2 class="display-5 link-body-emphasis mb-1">Frequently Asked Questions for Hospital Care</h2>
+						<!-- <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p> -->
+						<p></p>
+						<blockquote>
+							<p><strong>VAH Care</strong> aim is helping individuals to receive a bespoke, safe and optimised management plan.</p>
+						</blockquote>
+						<p>At VAH Care, we understand that families may have questions about hospital care. Here are some common questions we encounter:</p>
+						<h3>What sets VAH Care apart?</h3>
+						<p>VAH Care is dedicated to providing personalized and compassionate care to individuals with hospital care needs. Our team of experts works closely with patients and their families to ensure the best possible outcomes.</p>
+						<!-- <table class="table">
+							<thead>
+								<tr>
+									<th>Hospital-Acquired Infections</th>
+									<th>Children</th>
+									<th>Adults</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Individuals</td>
+									<td>1%</td>
+									<td>2.2%</td>
+								</tr>
+								<tr>
+									<td>Males</td>
+									<td>1 in 36</td>
+									<td>1,064.7</td>
+								</tr>
+								<tr>
+									<td>Females</td>
+									<td>1 in 31</td>
+									<td>508.1</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td>Totals</td>
+									<td>788.3</td>
+									<td>5.4 million</td>
+								</tr>
+							</tfoot>
+						</table> -->
+						<p> </p>
+					</article> 
+
+					<article class="blog-post">
+						<h2 class="display-5 link-body-emphasis mb-1">Frequently Asked Questions</h2>
+						<!-- <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p> -->
+						<p>At VAH Care, we understand that families may have questions about hospital care. Here are some common questions we encounter:</p>
+						<div id="accordion">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            What is hospital care?
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Hospital care refers to the medical services provided to patients who are admitted to a hospital for treatment and care. This can include a wide range of services, from emergency care to specialized treatments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link text-decoration-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            How can families support their loved ones during hospitalization?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Families can support their loved ones during hospitalization by being present, advocating for their needs, and maintaining open communication with the healthcare team.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link text-decoration-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            What resources are available for families navigating hospital care?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>There are various resources available for families, including social workers, patient advocates, and support groups that can provide guidance and assistance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link text-decoration-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            What are the common challenges faced by families during hospitalization?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Families may face various challenges during hospitalization, including emotional stress, financial concerns, and difficulties in communication with healthcare providers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<p class="mt-3">By providing high-quality, compassionate care, hospitals play a vital role in promoting the health and well-being of patients and their families.</p>
+					</article>
+
+					<nav class="blog-pagination" aria-label="Pagination">
+						<a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+						<a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+					</nav>
+				</div>
+
+				<div class="col-md-4">
+					<div class="position-sticky" style="top: 2rem;">
+						<div class="p-4 mb-3 bg-body-tertiary rounded">
+							<h4 class="fst-italic">About</h4>
+							<p class="mb-0">VAH Care provides information and resources for families navigating the complexities of hospital care.</p>
+						</div>
+						<div>
+							<h4 class="fst-italic">Recent posts</h4>
+							<ul class="list-unstyled">
+								<li>
+									<a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+										<svg aria-hidden="true" class="bd-placeholder-img" height="96" preserveAspectRatio="xMidYMid slice" width="100%" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect></svg>
+										<div class="col-lg-8">
+											<h6 class="mb-0">Patient Flow Optimization</h6>
+											<small class="text-body-secondary">January 15, 2024</small>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+										<svg aria-hidden="true" class="bd-placeholder-img" height="96" preserveAspectRatio="xMidYMid slice" width="100%" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect></svg>
+										<div class="col-lg-8">
+											<h6 class="mb-0">Leveraging Technology</h6>
+											<small class="text-body-secondary">January 14, 2024</small>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+										<svg aria-hidden="true" class="bd-placeholder-img" height="96" preserveAspectRatio="xMidYMid slice" width="100%" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#777"></rect></svg>
+										<div class="col-lg-8">
+											<h6 class="mb-0">Patient-Centric Care Models</h6>
+											<small class="text-body-secondary">January 13, 2024</small>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="p-4">
+							<h4 class="fst-italic">Archives</h4>
+							<ol class="list-unstyled mb-0">
+								<li><a href="#">March 2021</a></li>
+								<li><a href="#">February 2021</a></li>
+								<li><a href="#">January 2021</a></li>
+								<li><a href="#">December 2020</a></li>
+								<li><a href="#">November 2020</a></li>
+								<li><a href="#">October 2020</a></li>
+								<li><a href="#">September 2020</a></li>
+								<li><a href="#">August 2020</a></li>
+								<li><a href="#">July 2020</a></li>
+								<li><a href="#">June 2020</a></li>
+								<li><a href="#">May 2020</a></li>
+								<li><a href="#">April 2020</a></li>
+							</ol>
+						</div>
+						<div class="p-4">
+							<h4 class="fst-italic">Social</h4>
+							<ol class="list-unstyled">
+								<li><a href="#">LinkedIn</a></li>
+								<li><a href="#">Twitter</a></li>
+								<li><a href="#">Facebook</a></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+			<p>Care & Support built for <a href="https://getbootstrap.com/">VAH Care</a> by <a href="https://x.com/solutionsbenit" target="_blank">@benitapollosolutions</a>.</p>
+			<p class="mb-0">
+				<a href="#">Back to top</a>
+			</p>
+		</footer>
+		<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
